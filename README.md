@@ -41,3 +41,5 @@ La clase `Main` es la clase principal que instancia y ejecuta el menú para inte
 
 - `Daniel`: Se ha encargado de hacer la conexion a la base de datos y una consulta de cada fichero xml diferente
 - `Raul`: Se ha encargado de hacer el menu y una consulta de cada fichero xml diferente
+
+- `Festivales.xml` en este fichero hemos hecho 3 consultas de insertar, modificar y eliminar. Aqui hemos trabajado los dos            pensando en como maquetar y hacer bien el codigo y la consulta.
