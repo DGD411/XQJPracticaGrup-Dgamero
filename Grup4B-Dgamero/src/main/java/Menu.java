@@ -8,7 +8,7 @@ public class Menu {
         this.gestorDB = gestorDB;
     }
 
-    public void mostrarMenu() throws XQException {
+    public void mostrarMenu() throws XQException, InterruptedException {
         Scanner scanner = new Scanner(System.in);
         int opcion;
 
@@ -18,6 +18,9 @@ public class Menu {
             System.out.println("2. Consulta de eventos por año (Festivales.xml)");
             System.out.println("3. Consulta de fabricas por distrito y equipamiento (Fabricas.xml)");
             System.out.println("4. Consulta de total de metros cuadados por año (Fabricas.xml)");
+            System.out.println("5. Consulta insertar un nuevo evento (Festivales.xml)");
+            System.out.println("6. Consulta modificar un evento existente (Festivales.xml)");
+            System.out.println("7. Consulta eliminar un evento existente (Festivales.xml)");
             System.out.println("0. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
@@ -34,6 +37,17 @@ public class Menu {
                     break;
                 case 4:
                     gestorDB.calcularTotalMetrosCuadradosPorAño();
+                    break;
+                case 5:
+                    gestorDB.insertarNuevoEvento();
+                    Thread.sleep(1000);
+                    gestorDB.consultarUltimoEvento();
+                    break;
+                case 6:
+                    gestorDB.modificarEvento();
+                    break;
+                case 7:
+                    gestorDB.eliminarEvento();
                     break;
                 case 0:
                     System.out.println("Saliendo del programa...");
